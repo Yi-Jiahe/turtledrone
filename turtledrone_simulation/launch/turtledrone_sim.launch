@@ -1,0 +1,8 @@
+<launch>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+   <!-- <arg name="world_name" value="$(find turtledrone_simulation)/worlds/world1.world" />-->
+  <arg name="verbose" value="true" />
+  </include>
+
+  <node name="spawn_turtledrone" pkg="gazebo_ros" type="spawn_model" args="-file $(find turtledrone_simulation)/models/turtledrone/model.sdf -sdf -model turtledrone" />
+</launch>
